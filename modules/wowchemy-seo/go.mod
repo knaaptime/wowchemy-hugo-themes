@@ -3,5 +3,5 @@ module github.com/knaaptime/wowchemy-hugo-themes/modules/wowchemy-seo
 go 1.15
 
 require (
-	github.com/knaaptime/wowchemy-hugo-themes/modules/wowchemy-core main
+	github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-core v0.1.0
 )
