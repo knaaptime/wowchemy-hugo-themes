@@ -44,10 +44,4 @@
 
 {{ else }}
 
-  {{ with $notice }}
-  <p class="powered-by copyright-license-text">
-    {{ replace . "{year}" now.Year | markdownify }}
-  </p>
-  {{ end }}
-
 {{ end }}
