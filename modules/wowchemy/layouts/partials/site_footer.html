@@ -10,19 +10,4 @@
   {{ end }}
   {{ partial $footer_section_path . }}
 
-  <p class="powered-by">
-    {{ $is_sponsor := site.Params.i_am_a_sponsor | default false }}
-    {{ $hide_published_with_footer := site.Params.power_ups.hide_published_with | default true }}
-    {{ if not (and $is_sponsor $hide_published_with_footer) }}
-      {{ $default := "" }}
-      {{ $i18n_published_with := i18n "published_with" | default $default }}
-
-        {{ $i18n_published_with = $default }}
-      {{ end }}
-      {{ $i18n_published_with = replace $i18n_published_with "" | safeHTML }}
-      {{ $i18n_published_with = replace $i18n_published_with "" | safeHTML }}
-      {{ $i18n_published_with = replace $i18n_published_with "{/repo_link}" "</a>" | safeHTML }}
-      {{ $i18n_published_with | replaceRE "{year}" now.Year | markdownify | emojify | safeHTML }}
-    {{ end }}
-  </p>
 </footer>
